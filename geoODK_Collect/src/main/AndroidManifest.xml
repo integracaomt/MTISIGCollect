@@ -377,13 +377,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".preferences.GPAPPreferencesActivity">
+        <!--<activity android:name=".preferences.GPAPPreferencesActivity">
             <intent-filter>
                 <action android:name="eu.hydrologis.geopaparazzi.preferences.PREFERENCES" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>
+        </activity>-->
         <activity android:name="eu.hydrologis.geopaparazzi.chart.ProfileChartActivity">
             <intent-filter>
                 <action android:name="eu.hydrologis.geopaparazzi.chart.VIEW_IN_CHART" />

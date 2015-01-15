@@ -1,137 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<pre-dex-items>
+<items version="2" >
 
     <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\osmdroid-android-4.2-bff8d2eb3cf3dfe451aefd4cfde1262cc772c27c.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\osmdroid-android-4.2.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="f3a0c73a9ed04a5d0959789c53da9f08462bfcc2"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\acra-4.5.0-c7802b64c6ce7548d5630c810031bc12d7336464.jar"
-        jar="C:\Users\IntegracaoMT\.gradle\caches\modules-2\files-2.1\ch.acra\acra\4.5.0\44a5eb946e0d83eed4a0128d877ca1fd8168b83a\acra-4.5.0.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="44a5eb946e0d83eed4a0128d877ca1fd8168b83a"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\httpclientandroidlib-4.2.1-fceea932bf4f99b33a5787c7f40a5e59036bedf7.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\httpclientandroidlib-4.2.1.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="8bdf7922c7f165bc2f4ec893eaf97e4abe47f97f"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\httpcore-4.2.2-39dc13d5b861dd73e19555a2e9318a1e5fc1aecd.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\httpcore-4.2.2.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="b76bee23cd3f3ee9b98bc7c2c14670e821ddbbfd"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\geopaparazzilibrary-b2061908964af4410ee6e2b42cbc988fd901fa56.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\geopaparazzilibrary.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="cdef0dbf2a460fcd14c7b291e91fd5b85d31f5c0"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\androidplot-core-0.6.1-9adebdf744a7b21413ab7405e4f5707b3d088d40.jar"
-        jar="C:\Users\IntegracaoMT\.gradle\caches\modules-2\files-2.1\com.androidplot\androidplot-core\0.6.1\3db0daea52375b26bfa61c59b8df93950bdefbbc\androidplot-core-0.6.1.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="3db0daea52375b26bfa61c59b8df93950bdefbbc"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-a0087ae45f8648f1320f2870a8cd0f10e5de481b.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\libs\internal_impl-20.0.0.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\joda-time-2.5-576948d7c556fd5cb27c004ecf0a9918d09e04ae.jar"
-        jar="C:\Users\IntegracaoMT\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.5\c73038a3688525aad5cf33409df483178290cd64\joda-time-2.5.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="c73038a3688525aad5cf33409df483178290cd64"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\slf4j-android-1.6.1-RC1-3ce93671adf268f8b9cfc5ee4eb927e91a40fe6e.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\slf4j-android-1.6.1-RC1.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="a0b527e8aabcc1f1e97d1674dc3f4f0794ec5df1"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\httpclient-4.2.2-310fb260662999a2a3722b94e5581db55acc6b00.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\httpclient-4.2.2.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="872a71eac51131524f72f3100781dd88a42c9ccc"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\osmbonuspack_v4.6-8a484e477d42dc637063c50ec3b0c209c737f675.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\osmbonuspack_v4.6.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="a1c40158d90b10b6532f04dc1857f0d6709ec1e9"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\javarosa-libraries-2014-04-29-5eed6d37a4ffaaeb9e869beebcb8023878665738.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\javarosa-libraries-2014-04-29.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="11999a090a90bb7256be32285d56333e53a8e3d5"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\classes-6d2d24bac88d2c627c0c527f9a6dffb4f6e78908.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.71\classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-a4e99bb09db83315001218d362c2ad030bbe2f2c.jar"
-        jar="C:\Program Files (x86)\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\opencsv-2.3-dc5bee259d657ab1a5c4127a044dcf8d137eaecb.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\opencsv-2.3.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="c0ffd01065bc3fe571e1a4eb7014a03333f0663d"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\mapsforge-map-0.3.1-SNAPSHOT-jar-with-dependencies-959fa1c5bf722646990b6313a5ce9262b46d7916.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\mapsforge-map-0.3.1-SNAPSHOT-jar-with-dependencies.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="cee394210150a883770cac939250846d155578e8"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\markers-179f2184bcfac7bbbd794b62aeafdd41124af4ba.jar"
         jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\markers.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="08932bf2f09584172fcc3e65336e4eeeb93804c5"/>
+        sha1="08932bf2f09584172fcc3e65336e4eeeb93804c5">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\markers-179f2184bcfac7bbbd794b62aeafdd41124af4ba.jar" />
+    </item>
     <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\commons-io-2.4-ef011251f718648479eddb0e6c278127aeff6a7a.jar"
-        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\commons-io-2.4.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad"/>
-    <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\classes-3330d6a5f8efa712438e154c182b5f464ae0a870.jar"
         jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\classes-3330d6a5f8efa712438e154c182b5f464ae0a870.jar" />
+    </item>
     <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\libs-2b5a593407ba223174f172a5585cb5300d668b7c.jar"
         jar="C:\Users\IntegracaoMT\Documents\mticollect\libs\build\libs\libs.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="efc05b938aa7f8e7963b3d9753c6c2aa2ae022e7"/>
+        sha1="55d5971e939c415dc18fae882c6ad84d6afe5228">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\libs-2b5a593407ba223174f172a5585cb5300d668b7c.jar" />
+    </item>
     <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\httpmime-4.4-beta1-455bfb9e9bc4205451327d9cce3fa70adbff6744.jar"
-        jar="C:\Users\IntegracaoMT\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpmime\4.4-beta1\10a9889c6d4a40c5f65b6448f9d539406161e0d0\httpmime-4.4-beta1.jar"
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\opencsv-2.3.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="10a9889c6d4a40c5f65b6448f9d539406161e0d0"/>
+        sha1="c0ffd01065bc3fe571e1a4eb7014a03333f0663d">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\opencsv-2.3-dc5bee259d657ab1a5c4127a044dcf8d137eaecb.jar" />
+    </item>
     <item
-        dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\kxml2-2.3.0-346a9a87a5d59a3a8a6ca5acbc1280bec91e1858.jar"
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\httpcore-4.2.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="b76bee23cd3f3ee9b98bc7c2c14670e821ddbbfd">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\httpcore-4.2.2-39dc13d5b861dd73e19555a2e9318a1e5fc1aecd.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\slf4j-android-1.6.1-RC1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="a0b527e8aabcc1f1e97d1674dc3f4f0794ec5df1">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\slf4j-android-1.6.1-RC1-3ce93671adf268f8b9cfc5ee4eb927e91a40fe6e.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\.gradle\caches\modules-2\files-2.1\ch.acra\acra\4.5.0\44a5eb946e0d83eed4a0128d877ca1fd8168b83a\acra-4.5.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="44a5eb946e0d83eed4a0128d877ca1fd8168b83a">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\acra-4.5.0-c7802b64c6ce7548d5630c810031bc12d7336464.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\httpclientandroidlib-4.2.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8bdf7922c7f165bc2f4ec893eaf97e4abe47f97f">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\httpclientandroidlib-4.2.1-fceea932bf4f99b33a5787c7f40a5e59036bedf7.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\osmbonuspack_v4.6.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="a1c40158d90b10b6532f04dc1857f0d6709ec1e9">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\osmbonuspack_v4.6-8a484e477d42dc637063c50ec3b0c209c737f675.jar" />
+    </item>
+    <item
         jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\kxml2-2.3.0.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="ccbc77a5fd907ef863c29f3596c6f54ffa4e9442"/>
+        sha1="ccbc77a5fd907ef863c29f3596c6f54ffa4e9442">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\kxml2-2.3.0-346a9a87a5d59a3a8a6ca5acbc1280bec91e1858.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.71\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\classes-6d2d24bac88d2c627c0c527f9a6dffb4f6e78908.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\libs\internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-a0087ae45f8648f1320f2870a8cd0f10e5de481b.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.5\c73038a3688525aad5cf33409df483178290cd64\joda-time-2.5.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="c73038a3688525aad5cf33409df483178290cd64">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\joda-time-2.5-576948d7c556fd5cb27c004ecf0a9918d09e04ae.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpmime\4.4-beta1\10a9889c6d4a40c5f65b6448f9d539406161e0d0\httpmime-4.4-beta1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="10a9889c6d4a40c5f65b6448f9d539406161e0d0">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\httpmime-4.4-beta1-455bfb9e9bc4205451327d9cce3fa70adbff6744.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\httpclient-4.2.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="872a71eac51131524f72f3100781dd88a42c9ccc">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\httpclient-4.2.2-310fb260662999a2a3722b94e5581db55acc6b00.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\commons-io-2.4.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\commons-io-2.4-ef011251f718648479eddb0e6c278127aeff6a7a.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\.gradle\caches\modules-2\files-2.1\com.androidplot\androidplot-core\0.6.1\3db0daea52375b26bfa61c59b8df93950bdefbbc\androidplot-core-0.6.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="3db0daea52375b26bfa61c59b8df93950bdefbbc">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\androidplot-core-0.6.1-9adebdf744a7b21413ab7405e4f5707b3d088d40.jar" />
+    </item>
+    <item
+        jar="C:\Program Files (x86)\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-a4e99bb09db83315001218d362c2ad030bbe2f2c.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\mapsforge-map-0.3.1-SNAPSHOT-jar-with-dependencies.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="cee394210150a883770cac939250846d155578e8">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\mapsforge-map-0.3.1-SNAPSHOT-jar-with-dependencies-959fa1c5bf722646990b6313a5ce9262b46d7916.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\osmdroid-android-4.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="f3a0c73a9ed04a5d0959789c53da9f08462bfcc2">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\osmdroid-android-4.2-bff8d2eb3cf3dfe451aefd4cfde1262cc772c27c.jar" />
+    </item>
+    <item
+        jar="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\libs\javarosa-libraries-2014-04-29.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="11999a090a90bb7256be32285d56333e53a8e3d5">
+        <dex dex="C:\Users\IntegracaoMT\Documents\mticollect\geoODK_Collect\build\intermediates\pre-dexed\debug\javarosa-libraries-2014-04-29-5eed6d37a4ffaaeb9e869beebcb8023878665738.jar" />
+    </item>
 
-</pre-dex-items>
+</items>
