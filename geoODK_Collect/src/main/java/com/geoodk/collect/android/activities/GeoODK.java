@@ -52,7 +52,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class GeoODK extends Activity {
-	private static final String t = "MTISIG";
+	private static final String t = "GeoODK";
 	private static boolean EXIT = true;
 	private AlertDialog mAlertDialog;
 	private String[] assestFormList;

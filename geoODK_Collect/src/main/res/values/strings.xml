@@ -678,4 +678,7 @@
     <string name="toggle_visibility">toggle visibility</string>
     <string name="label_field">label field</string>
     <string name="label_size">label size</string>
+    <string name="view_shape">Edit Shape</string>
+    <string name="record_trace">Record GeoTrace</string>
+    <string name="view_trace">View GeoTrace</string>
 </resources>

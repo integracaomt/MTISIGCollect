@@ -40,7 +40,7 @@
 				android:visibility="gone" />
 		<Button android:id="@+id/bubble_moreinfo" 
 				android:visibility="visible"
-				android:text="Edit Data"
+				android:text="Editar Dados"
 				android:layout_width="200dp"
 				android:layout_height="wrap_content" 
 				android:layout_gravity="center"/>

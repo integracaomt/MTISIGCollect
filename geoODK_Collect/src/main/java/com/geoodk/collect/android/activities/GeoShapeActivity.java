@@ -29,6 +29,7 @@ import org.osmdroid.DefaultResourceProxyImpl;
 import org.osmdroid.bonuspack.overlays.MapEventsOverlay;
 import org.osmdroid.bonuspack.overlays.MapEventsReceiver;
 import org.osmdroid.bonuspack.overlays.Marker;
+import org.osmdroid.bonuspack.overlays.Marker.OnMarkerClickListener;
 import org.osmdroid.bonuspack.overlays.Marker.OnMarkerDragListener;
 import org.osmdroid.events.MapListener;
 import org.osmdroid.events.ScrollEvent;
@@ -45,10 +46,15 @@ import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay;
 import com.geoodk.collect.android.R;
 import com.geoodk.collect.android.application.Collect;
 import com.geoodk.collect.android.preferences.MapSettings;
+import com.geoodk.collect.android.spatial.CustomMarkerHelper;
 import com.geoodk.collect.android.spatial.MBTileProvider;
 import com.geoodk.collect.android.spatial.MapHelper;
+import com.geoodk.collect.android.widgets.GeoPointWidget;
+import com.geoodk.collect.android.widgets.GeoShapeWidget;
+
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -63,6 +69,7 @@ import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 
 public class GeoShapeActivity extends Activity implements IRegisterReceiver {
@@ -84,6 +91,7 @@ public class GeoShapeActivity extends Activity implements IRegisterReceiver {
 	private SharedPreferences sharedPreferences;
 	public Boolean layerStatus = false;
 	private int selected_layer= -1;
+	private ProgressDialog progress;
 	
 	private MBTileProvider mbprovider;
 	private TilesOverlay mbTileOverlay;
@@ -91,6 +99,7 @@ public class GeoShapeActivity extends Activity implements IRegisterReceiver {
 	private ImageButton gps_button;
 	private String[] OffilineOverlays;
 	public MyLocationNewOverlay mMyLocationOverlay;
+	private Boolean data_loaded = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +114,10 @@ public class GeoShapeActivity extends Activity implements IRegisterReceiver {
 		//		.getDefaultSharedPreferences(this);
 		//PreferenceManager.setDefaultValues(this, R.xml.map_preferences, false);
 		//sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+		
+		
+		
+		
 		sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 		Boolean online = sharedPreferences.getBoolean(MapSettings.KEY_online_offlinePrefernce, true);
 		String basemap = sharedPreferences.getString(MapSettings.KEY_map_basemap, "MAPQUESTOSM");
@@ -153,7 +166,8 @@ public class GeoShapeActivity extends Activity implements IRegisterReceiver {
 				// TODO Auto-generated method stub
 				if (map_markers.size() != 0){
 					if (polygon_connection ==true){
-						clearFeatures();
+						//clearFeatures();
+						showClearDialog();
 					}else{
 						Marker c_mark = map_markers.get(map_markers.size()-1);
 						mapView.getOverlays().remove(c_mark);
@@ -201,8 +215,68 @@ public class GeoShapeActivity extends Activity implements IRegisterReceiver {
         imlp.setLocationUpdateMinTime(60000);
         mMyLocationOverlay = new MyLocationNewOverlay(this, mapView);
         mMyLocationOverlay.runOnFirstFix(centerAroundFix);
+        
+        progress = new ProgressDialog(this);
+        progress.setTitle("Loading Location");
+        progress.setMessage("Wait while loading...");
+        progress.show();
+        
         setGPSStatus();
+        
+		Intent intent = getIntent();
+		if (intent != null && intent.getExtras() != null) {
+			if ( intent.hasExtra(GeoShapeWidget.SHAPE_LOCATION) ) {
+				data_loaded =true;
+				String s = intent.getStringExtra(GeoShapeWidget.SHAPE_LOCATION);
+				//Overlay Polygons and points passed in
+				overlayIntentPolygon(s);
+				//Toast.makeText(this, s, Toast.LENGTH_LONG).show();
+			}
+		}
+        
 	    mapView.invalidate();
+	}
+	private void overlayIntentPolygon(String str){
+
+		clear_button.setVisibility(View.VISIBLE);
+		clear_button_test = true;
+	
+		//Populate map_markers array
+		String s = str.replace("; ",";");
+		String[] sa = s.split(";");
+		for (int i=0;i<(sa.length -1);i++){
+			int x = i;
+			String[] sp = sa[i].split(" ");
+			double gp[] = new double[4];
+			String lat = sp[0].replace(" ", "");
+			String lng = sp[1].replace(" ", "");
+			gp[0] = Double.valueOf(lat).doubleValue();
+			gp[1] = Double.valueOf(lng).doubleValue();
+			
+			Marker marker = new Marker(mapView);
+			GeoPoint point = new GeoPoint(gp[0], gp[1]);    
+			marker.setPosition(point);
+			marker.setDraggable(true);
+			marker.setIcon(getResources().getDrawable(R.drawable.map_marker));
+			marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
+			marker.setOnMarkerClickListener(nullmarkerlistner);
+			map_markers.add(marker);
+			
+			//if (i == (sa.length -2) ){
+				//pathOverlay.addPoint(map_markers.get(0).getPosition());
+			//}else{
+			pathOverlay.addPoint(marker.getPosition());
+			marker.setDraggable(true);
+			marker.setOnMarkerDragListener(draglistner);
+			mapView.getOverlays().add(marker);
+			//}
+			
+			 
+		}
+		polygon_button.callOnClick();
+		//polygon_connection= true;
+		mapView.getOverlays().remove(OverlayEventos);
+		//mapView.invalidate();
 	}
 	
 	private void setGPSStatus(){
@@ -225,7 +299,13 @@ public class GeoShapeActivity extends Activity implements IRegisterReceiver {
         public void run() {
             mHandler.post(new Runnable() {
                 public void run() {
-                    zoomToMyLocation();
+                	if (data_loaded ==false){
+                		zoomToMyLocation();
+                	}else{
+                		zoomToPoints();
+                	}
+                    //zoomToMyLocation();
+                    progress.dismiss();
                 }
             });
         }
@@ -307,6 +387,11 @@ public class GeoShapeActivity extends Activity implements IRegisterReceiver {
 		setGPSStatus();
 	}
 	
+	/*@Override
+	public void onBackPressed() {
+		saveGeoTrace();
+	}*/
+	
     @Override
 	protected void onPause() {
 		// TODO Auto-generated method stub
@@ -335,12 +420,19 @@ public class GeoShapeActivity extends Activity implements IRegisterReceiver {
 		map_markers.clear();
 		pathOverlay.clearPath();
 		mapView.getOverlays().clear();
-		mapView.invalidate();
+		//clearMarkersOverlay();
 		polygon_button.setVisibility(View.VISIBLE);
 		clear_button.setVisibility(View.GONE);
+		if(gpsStatus ==true){
+			upMyLocationOverlayLayers();
+			
+		}
 		overlayMapLayerListner();
 		
+		mapView.invalidate();
+		
 	}
+	
 
 	private void showClearDialog(){
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -414,6 +506,7 @@ public class GeoShapeActivity extends Activity implements IRegisterReceiver {
 			marker.setDraggable(true);
 			marker.setIcon(getResources().getDrawable(R.drawable.map_marker));
 			marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
+			marker.setOnMarkerClickListener(nullmarkerlistner);
 			map_markers.add(marker);
 			marker.setDraggable(true);
 			marker.setOnMarkerDragListener(draglistner);
@@ -460,11 +553,12 @@ public class GeoShapeActivity extends Activity implements IRegisterReceiver {
 			
 		}
 	};
+
 	private void showLayersDialog() {
 		// TODO Auto-generated method stub
 		//FrameLayout fl = (ScrollView) findViewById(R.id.layer_scroll);
 		//View view=fl.inflate(self, R.layout.showlayers_layout, null);
-		AlertDialog.Builder alertDialog = new AlertDialog.Builder(GeoShapeActivity.this);
+		AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 		alertDialog.setTitle("Select Offline Layer");
 		OffilineOverlays = getOfflineLayerList(); // Maybe this should only be done once. Have not decided yet.
 		//alertDialog.setItems(list, new  DialogInterface.OnClickListener() {
@@ -581,7 +675,35 @@ public class GeoShapeActivity extends Activity implements IRegisterReceiver {
 		 }*/
 		return finala;
 	}
+	 
+	    private OnMarkerClickListener nullmarkerlistner= new Marker.OnMarkerClickListener() {
+			
+			@Override
+			public boolean onMarkerClick(Marker arg0, MapView arg1) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+		};
+		
+		private void zoomToPoints(){
+			mapView.getController().setZoom(15);
+			mapView.invalidate();
+			Handler handler=new Handler();
+			Runnable r = new Runnable(){
+			    public void run() {
+			    	GeoPoint c_marker = map_markers.get(0).getPosition();
+			    	mapView.getController().setCenter(c_marker);
+			    }
+			}; 
+			handler.post(r);
+			mapView.invalidate();
+			
+		}
 
-	
+	    /*private void saveGeoTrace(){
+	    	//Toast.makeText(this, "Do Save Stuff", Toast.LENGTH_LONG).show();
+	    	returnLocation();
+	    	finish();
+	    }*/
 	
 }

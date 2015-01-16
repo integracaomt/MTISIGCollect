@@ -302,13 +302,9 @@ public class OSM_Map extends Activity implements IRegisterReceiver{
                             startMarker.setMarker_geoField(cur_mark[pos_geoField]);
                             startMarker.setPosition(point);
                             startMarker.setIcon(this.getResources().getDrawable(R.drawable.map_marker));
-                            startMarker.setTitle(cur_mark[pos_name]);
+                            startMarker.setTitle("Name: "+ cur_mark[pos_name]);
                             startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-                            if (cur_mark[pos_status].equals("incomplete")){
-                                startMarker.setSnippet("Status: Incompleto");}
-                            else  {
-                                startMarker.setSnippet("Status: Completo");}
-                            //startMarker.setSnippet("Status: "+cur_mark[pos_status]);
+                            startMarker.setSnippet("Status: "+cur_mark[pos_status]);
                             startMarker.setDraggable(true);
                             startMarker.setOnMarkerDragListener(draglistner);
                             startMarker.setInfoWindow(new CustomPopupMaker(mapView, Uri.parse(cur_mark[pos_uri])));
@@ -482,7 +478,7 @@ public class OSM_Map extends Activity implements IRegisterReceiver{
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.osmmap_layout); //Setting Content to layout xml
-        setTitle(this.getString(R.string.app_name) + " > Mapa de Coletas"); // Setting title of the action
+        setTitle(this.getString(R.string.app_name) + " > Mapping"); // Setting title of the action
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         resource_proxy = new DefaultResourceProxyImpl(this.getApplicationContext());
         mapView = (MapView)this.findViewById(R.id.MapViewId);
@@ -562,6 +558,12 @@ public class OSM_Map extends Activity implements IRegisterReceiver{
         // TODO Auto-generated method stub
         super.onPause();
         this.disableMyLocation();
+        clearMapMarkers();
+    }
+    
+    private void clearMapMarkers() {
+        mapView.getOverlays().clear();
+        markerListArray.clear();
     }
 
 
@@ -668,7 +670,7 @@ public class OSM_Map extends Activity implements IRegisterReceiver{
                 default:
                     OSM_Map.this.mapView.getOverlays().remove(OSM_Map.this.mbTileOverlay);
                     //String mbTileLocation = getMBTileFromItem(item);
-                    final String mbFilePath = OSM_Map.this.getMBTileFromItem(item);
+                    final String mbFilePath = getMBTileFromItem(item);
                     //File mbFile = new File(Collect.OFFLINE_LAYERS+"/GlobalLights/control-room.mbtiles");
                     final File mbFile = new File(mbFilePath);
                     OSM_Map.this.mbprovider = new MBTileProvider(OSM_Map.this, mbFile);
