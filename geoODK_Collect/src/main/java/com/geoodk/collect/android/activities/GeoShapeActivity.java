@@ -13,7 +13,7 @@
  */
 
 /**
- * Responsible for creating polygons
+ * Responsible for creating polygons ok
  *
  * @author Jon Nordling (jonnordling@gmail.com)
  */
