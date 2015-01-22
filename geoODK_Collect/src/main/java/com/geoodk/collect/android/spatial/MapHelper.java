@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import org.osmdroid.tileprovider.tilesource.ITileSource;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
+import org.osmdroid.tileprovider.tilesource.XYTileSource;
 
 import com.geoodk.collect.android.application.Collect;
 
@@ -24,8 +25,12 @@ public class MapHelper {
             baseTiles = TileSourceFactory.MAPQUESTOSM;
         }else if(basemap.equals("MAPQUESTAERIAL")){
             baseTiles = TileSourceFactory.MAPQUESTAERIAL;
+        }else if(basemap.equals("Moabi_Baselayer")){
+            	String[] baseURL = new String[]{"http://tiles.osm.moabi.org/moabi_base/"}; 
+            	baseTiles = new XYTileSource("Moabli",null, 4, 17, 256, ".png", baseURL);
         }else{
             baseTiles = TileSourceFactory.MAPQUESTOSM;
+        	
         }
         return baseTiles;
 	}
@@ -46,4 +51,20 @@ public class MapHelper {
     	 }*/
         return finala;
     }
+    /*private String getMBTileFromItem(final int item) {
+	    // TODO Auto-generated method stub
+	    final String foldername = OffilineOverlays[item];
+	    final File dir = new File(Collect.OFFLINE_LAYERS+File.separator+foldername);
+	    String mbtilePath;
+	    final File[] files = dir.listFiles(new FilenameFilter() {
+	        @Override
+	        public boolean accept(final File dir, final String name) {
+	            return name.toLowerCase().endsWith(".mbtiles");
+	        }
+	    });
+	    mbtilePath =Collect.OFFLINE_LAYERS+File.separator+foldername+File.separator+files[0].getName();
+	    //returnFile = new File(Collect.OFFLINE_LAYERS+File.separator+foldername+files[0]);
+	
+	    return mbtilePath;
+    }*/
 }

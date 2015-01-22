@@ -22,7 +22,6 @@
 package com.geoodk.collect.android.activities;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,29 +29,19 @@ import java.io.OutputStream;
 
 import com.geoodk.collect.android.R;
 import com.geoodk.collect.android.application.Collect;
-import com.geoodk.collect.android.preferences.AdminPreferencesActivity;
-import com.geoodk.collect.android.preferences.MapSettings;
-import com.geoodk.collect.android.preferences.PreferencesActivity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 public class GeoODK extends Activity {
-	private static final String t = "MTISIG";
+	private static final String t = "MTISIG Collect";
 	private static boolean EXIT = true;
 	private AlertDialog mAlertDialog;
 	private String[] assestFormList;
@@ -67,7 +56,7 @@ public class GeoODK extends Activity {
         setContentView(R.layout.geoodk_layout);
         
         //Create the files and directorys
-        
+
         Log.i(t, "Starting up, creating directories");
 		try {
 			Collect.createODKDirs();
@@ -146,6 +135,18 @@ public class GeoODK extends Activity {
 				startActivity(i);
 			}
 		});
+        ImageButton rotas = (ImageButton) findViewById(R.id.rotas);
+        rotas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Collect.getInstance().getActivityLogger()
+                        .logAction(this, "deleteSavedForms", "click");
+                Intent i = new Intent(getApplicationContext(),
+                        GeoTraceActivity.class);
+                startActivity(i);
+            }
+        });
+
 		//End of Main activity
     }
 	
